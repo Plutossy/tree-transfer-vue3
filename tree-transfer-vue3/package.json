@@ -1,0 +1,43 @@
+{
+  "name": "tree-transfer-vue3",
+  "version": "1.1.0",
+  "description": "tree-fransfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件，使用前请确认已经引入element-plus！ 此组件功能类似于element-plus的transfer组件，但是里面的数据是树形结构！ ",
+  "main": "tree-transfer-vue3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "transfer",
+    "vue3-transfer",
+    "v3-transfer",
+    "tree-transfer",
+    "tree-transfer-vue3",
+    "tree-transfer-v3",
+    "el-tree-transfer",
+    "el-tree-transfer-v3",
+    "vue3-tree-transfer",
+    "vue3-el-tree-transfer",
+    "v3-tree-transfer",
+    "v3-el-tree-transfer",
+    "Transfer",
+    "Vue3Transfer",
+    "V3Transfer",
+    "TreeTransfer",
+    "TreeTransferVue3",
+    "TreeTransferV3",
+    "ElTreeTransfer",
+    "ElTreeTransferV3",
+    "Vue3TreeTransfer",
+    "Vue3ElTreeTransfer",
+    "V3TreeTransfer",
+    "V3ElTreeTransfer",
+    "穿梭框",
+    "Vue3穿梭框",
+    "穿梭框Vue3",
+    "树形穿梭框",
+    "Vue3树形穿梭框",
+    "树形穿梭框Vue3"
+  ],
+  "author": "pluto_ssy",
+  "license": "ISC"
+}
