@@ -12,7 +12,7 @@ tree-transfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件
 
 我命油我不油天，仿写一个 vue3 版本的树形穿梭框组件玩玩；参考[el-tree-transfer](https://www.npmjs.com/package/el-tree-transfer)
 
-### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](<[Plutossy/tree-transfer-vue3](https://github.com/Plutossy/tree-transfer-vue3)>) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
+### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](https://github.com/Plutossy/tree-transfer-vue3) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
 
 ## 快速上手
 

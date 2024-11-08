@@ -12,7 +12,7 @@ tree-transfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件
 
 我命油我不油天，仿写一个 vue3 版本的树形穿梭框组件玩玩；参考[el-tree-transfer](https://www.npmjs.com/package/el-tree-transfer)
 
-### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](<[Plutossy/tree-transfer-vue3](https://github.com/Plutossy/tree-transfer-vue3)>) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
+### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](https://github.com/Plutossy/tree-transfer-vue3) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
 
 ## 快速上手
 
@@ -142,33 +142,33 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 
 ## 属性
 
-| 属性名            | 说明                                                                            | 类型                | 默认值                 |
-| ----------------- | ------------------------------------------------------------------------------- | ------------------- | ---------------------- |
-| titleList         | 标题列表                                                                        | _Array_             | ['源列表', '目标列表'] |
-| showFilter        | 是否显示过滤框                                                                  | _Boolean_           | true                   |
+| 属性名            | 说明                                                         | 类型                | 默认值                 |
+| ----------------- | ------------------------------------------------------------ | ------------------- | ---------------------- |
+| titleList         | 标题列表                                                     | _Array_             | ['源列表', '目标列表'] |
+| showFilter        | 是否显示过滤框                                               | _Boolean_           | true                   |
 | placeholder       | 搜索框提示文字（注意：如果 placeholderList 里面有值，优先采用 placeholderList） | _String_            | 请输入关键字搜索       |
-| placeholderList   | 搜索框提示文字列表                                                              | _Array_             | []                     |
-| showBtnTxt        | 是否显示按钮文字                                                                | _Boolean_           | false                  |
-| btnTitleList      | 按钮文字（在 showBtnTxt 为 true 的情况下展示）                                  | _Array_             | ['添加', '移除']       |
-| defaultProps      | 树节点的属性配置                                                                | _Object_            | 见下表                 |
-| rootPid           | 根节点 pid，用于结束递归                                                        | _String_`/`_Number_ | 0                      |
-| renderAfterExpand | 是否在第一次展开某个树节点后才渲染其子节点                                      | _Boolean_           | true                   |
-| load              | 加载子树数据的方法，仅当 lazy 属性为 true 时生效                                | _Function_          | --                     |
-| fromRenderContent | 左侧 from 树节点的内容区的渲染函数                                              | _Function_          | --                     |
-| toRenderContent   | 右侧 to 树节点的内容区的渲染                                                    | _Function_          | --                     |
-| highlightCurrent  | 是否高亮当前选中节点                                                            | _Boolean_           | false                  |
-| defaultExpandAll  | 是否默认展开所有节点                                                            | _Boolean_           | true                   |
-| expandOnClickNode | 是否在点击节点的时候展开或者收缩节点                                            | _Boolean_           | false                  |
-| checkOnClickNode  | 是否在点击节点的时候选中节点                                                    | _Boolean_           | true                   |
-| autoExpandParent  | 是否自动展开父节点                                                              | _Boolean_           | true                   |
-| checkStrictly     | 是否严格的遵守父子节点不互相关联                                                | _Boolean_           | false                  |
-| accordion         | 是否每次只打开一个同级树节点                                                    | _Boolean_           | false                  |
-| indent            | 相邻级节点的水平缩进，单位为像素                                                | _Number_            | 18                     |
-| icon              | 自定义显示节点前的展开箭头                                                      | _String_            | --                     |
-| lazy              | 是否懒加载子节点数据                                                            | _Boolean_           | false                  |
-| draggable         | 是否开启拖拽节点功能                                                            | _Boolean_           | false                  |
-| fromAllowDrag     | 左侧树判断节点能否被拖拽 如果返回 false ，节点不能被拖动                        | _Function_          | --                     |
-| toAllowDrag       | 右侧树判断节点能否被拖拽 如果返回 false ，节点不能被拖动                        | _Function_          | --                     |
+| placeholderList   | 搜索框提示文字列表                                           | _Array_             | []                     |
+| showBtnTxt        | 是否显示按钮文字                                             | _Boolean_           | false                  |
+| btnTitleList      | 按钮文字（在 showBtnTxt 为 true 的情况下展示）               | _Array_             | ['添加', '移除']       |
+| defaultProps      | 树节点的属性配置                                             | _Object_            | 见下表                 |
+| rootPid           | 根节点 pid，用于结束递归                                     | _String_`/`_Number_ | 0                      |
+| renderAfterExpand | 是否在第一次展开某个树节点后才渲染其子节点                   | _Boolean_           | true                   |
+| load              | 加载子树数据的方法，仅当 lazy 属性为 true 时生效             | _Function_          | --                     |
+| fromRenderContent | 左侧 from 树节点的内容区的渲染函数                           | _Function_          | --                     |
+| toRenderContent   | 右侧 to 树节点的内容区的渲染                                 | _Function_          | --                     |
+| highlightCurrent  | 是否高亮当前选中节点                                         | _Boolean_           | false                  |
+| defaultExpandAll  | 是否默认展开所有节点                                         | _Boolean_           | true                   |
+| expandOnClickNode | 是否在点击节点的时候展开或者收缩节点                         | _Boolean_           | false                  |
+| checkOnClickNode  | 是否在点击节点的时候选中节点                                 | _Boolean_           | true                   |
+| autoExpandParent  | 是否自动展开父节点                                           | _Boolean_           | true                   |
+| checkStrictly     | 是否严格的遵守父子节点不互相关联                             | _Boolean_           | false                  |
+| accordion         | 是否每次只打开一个同级树节点                                 | _Boolean_           | false                  |
+| indent            | 相邻级节点的水平缩进，单位为像素                             | _Number_            | 18                     |
+| icon              | 自定义显示节点前的展开箭头                                   | _String_            | --                     |
+| lazy              | 是否懒加载子节点数据                                         | _Boolean_           | false                  |
+| draggable         | 是否开启拖拽节点功能                                         | _Boolean_           | false                  |
+| fromAllowDrag     | 左侧树判断节点能否被拖拽 如果返回 false ，节点不能被拖动     | _Function_          | --                     |
+| toAllowDrag       | 右侧树判断节点能否被拖拽 如果返回 false ，节点不能被拖动     | _Function_          | --                     |
 
 > ---
 
@@ -188,29 +188,29 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 
 ## 事件
 
-| 序号 | 事件名称      | 说明                                                  | 回调参数                                                                                                                                               |
-| ---- | ------------- | ----------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | add           | 点击添加按钮时触发的事件(2.4.0 以前为 addBtn)         | function(fromData,toData,obj),树形穿梭框 transfer 模式分别为 1.移动后左侧数据，2.移动后右侧数据，3.移动的节点 keys、nodes、halfKeys、halfNodes 对象；  |
-| 2    | remove        | 点击移除按钮时触发的事件(2.4.0 以前为 removeBtn)      | function(fromData,toData,obj),树形穿梭框 transfer 模式分别为 1.移动后左侧数据，2.移动后右侧数据，3.移动的节点 keys、nodes、halfKeys、halfNodes 对象；  |
-| 3    | nodeDragStart | 开始拖拽时触发的事件                                  | 共 3 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、event                                                                                     |
-| 4    | nodeDragEnter | 拖拽进入其他节点时触发的事件                          | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、所进入节点对应的 Node、event                                                              |
-| 5    | nodeDragLeave | 拖拽离开某个节点时触发的事件                          | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、所离开节点对应的 Node、event                                                              |
-| 6    | nodeDragOver  | 在拖拽节点时触发的事件（类似浏览器的 mouseover 事件） | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、当前进入节点对应的 Node、event                                                            |
+| 序号 | 事件名称      | 说明                                                  | 回调参数                                                     |
+| ---- | ------------- | ----------------------------------------------------- | :----------------------------------------------------------- |
+| 1    | add           | 点击添加按钮时触发的事件(2.4.0 以前为 addBtn)         | function(fromData,toData,obj),树形穿梭框 transfer 模式分别为 1.移动后左侧数据，2.移动后右侧数据，3.移动的节点 keys、nodes、halfKeys、halfNodes 对象； |
+| 2    | remove        | 点击移除按钮时触发的事件(2.4.0 以前为 removeBtn)      | function(fromData,toData,obj),树形穿梭框 transfer 模式分别为 1.移动后左侧数据，2.移动后右侧数据，3.移动的节点 keys、nodes、halfKeys、halfNodes 对象； |
+| 3    | nodeDragStart | 开始拖拽时触发的事件                                  | 共 3 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、event |
+| 4    | nodeDragEnter | 拖拽进入其他节点时触发的事件                          | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、所进入节点对应的 Node、event |
+| 5    | nodeDragLeave | 拖拽离开某个节点时触发的事件                          | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、所离开节点对应的 Node、event |
+| 6    | nodeDragOver  | 在拖拽节点时触发的事件（类似浏览器的 mouseover 事件） | 共 4 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、当前进入节点对应的 Node、event |
 | 7    | nodeDragEnd   | 拖拽结束时（可能未成功）触发的事件                    | 共 5 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、结束拖拽时最后进入的节点（可能为空）、被拖拽节点的放置位置（before、after、inner）、event |
-| 8    | nodeDrop      | 拖拽成功完成时触发的事件                              | 共 5 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、结束拖拽时最后进入的节点、被拖拽节点的放置位置（before、after、inner）、event             |
+| 8    | nodeDrop      | 拖拽成功完成时触发的事件                              | 共 5 个参数，依次为："from"/"to"、对应被拖拽节点对应的 Node、结束拖拽时最后进入的节点、被拖拽节点的放置位置（before、after、inner）、event |
 
 > ---
 
 ## 方法
 
-| 序号 | 名称           | 说明                                                                                                                                    |
-| ---- | -------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| 1    | fromTreeRef    | 左侧 from 树 ref 对象                                                                                                                   |
-| 2    | toTreeRef      | 右侧 to 树 ref 对象                                                                                                                     |
-| 3    | addToAims      | 手动调用添加穿梭，用于调整初始数据默认穿梭 function(useCallBack: Boolean) 本次穿梭是否需要触发@add 的 emit 回调； **默认 true 触发**    |
+| 序号 | 名称           | 说明                                                         |
+| ---- | -------------- | ------------------------------------------------------------ |
+| 1    | fromTreeRef    | 左侧 from 树 ref 对象                                        |
+| 2    | toTreeRef      | 右侧 to 树 ref 对象                                          |
+| 3    | addToAims      | 手动调用添加穿梭，用于调整初始数据默认穿梭 function(useCallBack: Boolean) 本次穿梭是否需要触发@add 的 emit 回调； **默认 true 触发** |
 | 4    | removeToSource | 手动调用添加穿梭，用于调整初始数据默认穿梭 function(useCallBack: Boolean) 本次穿梭是否需要触发@remove 的 emit 回调； **默认 true 触发** |
-| 5    | clearFilter    | 清除选中节点，默认清除全部 function(type: String) from 左边； to 右边； all 全部； **默认 all**                                         |
-| 6    | clearCheck     | 清除选中节点，默认清除全部 function(type: String) from 左边； to 右边； all 全部； **默认 all**                                         |
+| 5    | clearFilter    | 清除选中节点，默认清除全部 function(type: String) from 左边； to 右边； all 全部； **默认 all** |
+| 6    | clearCheck     | 清除选中节点，默认清除全部 function(type: String) from 左边； to 右边； all 全部； **默认 all** |
 
 > ---
 
