@@ -12,7 +12,7 @@ tree-transfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件
 
 我命油我不油天，仿写一个 vue3 版本的树形穿梭框组件玩玩；参考[el-tree-transfer](https://www.npmjs.com/package/el-tree-transfer)
 
-### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](https://github.com/Plutossy/Plutossy) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575?spm=1001.2014.3001.5501)
+### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](<[Plutossy/tree-transfer-vue3](https://github.com/Plutossy/tree-transfer-vue3)>) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
 
 ## 快速上手
 
@@ -229,6 +229,6 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 
 > **1.1.0** 添加说明文档，更新事件、方法、插槽
 
-## [GitHub demo 代码地址](https://github.com/Plutossy/Plutossy) 欢迎 star 谢谢
+## [GitHub demo 代码地址](https://github.com/Plutossy/tree-transfer-vue3) 欢迎 star 谢谢
 
-## [有 BUG 请随时联系我，可以在我的博客下面留言！](https://blog.csdn.net/Pluto_ssy/article/details/143627575?spm=1001.2014.3001.5501)
+## [有 BUG 请随时联系我，可以在我的博客下面留言！](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
