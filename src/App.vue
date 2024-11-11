@@ -18,7 +18,7 @@
 
 <script setup>
 import { ref } from 'vue';
-// import TreeTransfer from 'tree-transfer-vue3'; // 引入
+import TreeTransferVue3 from '../tree-transfer-vue3/tree-transfer-vue3.js'; // 引入
 
 const transferRef = ref(null); // 穿梭框Ref
 const fromData = ref([

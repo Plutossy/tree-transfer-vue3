@@ -1,5 +1,5 @@
 <template>
-  <div class="tree-transfer">
+  <div class="tree-transfer-vue3">
     <!-- 左侧穿梭框 原料框 -->
     <div class="transfer-left">
       <div class="transfer-title">
@@ -769,48 +769,48 @@ defineExpose({
 </script>
 
 <style scoped>
-.tree-transfer {
+.tree-transfer-vue3 {
   background-color: #fff;
   min-width: 560px;
   min-height: 400px;
   display: flex;
 }
 
-.tree-transfer .transfer-left,
-.tree-transfer .transfer-right {
+.tree-transfer-vue3 .transfer-left,
+.tree-transfer-vue3 .transfer-right {
   width: 45%;
   border: 1px solid #ebeef5;
 }
 
-.tree-transfer .transfer-left .transfer-title,
-.tree-transfer .transfer-right .transfer-title {
+.tree-transfer-vue3 .transfer-left .transfer-title,
+.tree-transfer-vue3 .transfer-right .transfer-title {
   display: flex;
   align-items: center;
   background-color: #f5f7fa;
   padding: 6px 10px;
 }
 
-.tree-transfer .transfer-left .transfer-title > span,
-.tree-transfer .transfer-right .transfer-title > span {
+.tree-transfer-vue3 .transfer-left .transfer-title > span,
+.tree-transfer-vue3 .transfer-right .transfer-title > span {
   margin-left: 8px;
 }
 
-.tree-transfer .transfer-left .transfer-main,
-.tree-transfer .transfer-right .transfer-main {
+.tree-transfer-vue3 .transfer-left .transfer-main,
+.tree-transfer-vue3 .transfer-right .transfer-main {
   margin: 10px;
 }
 
-.tree-transfer .transfer-left .transfer-main .filter-tree,
-.tree-transfer .transfer-right .transfer-main .filter-tree {
+.tree-transfer-vue3 .transfer-left .transfer-main .filter-tree,
+.tree-transfer-vue3 .transfer-right .transfer-main .filter-tree {
   margin-bottom: 8px;
 }
 
-.tree-transfer .transfer-left .transfer-main .el-tree,
-.tree-transfer .transfer-right .transfer-main .el-tree {
+.tree-transfer-vue3 .transfer-left .transfer-main .el-tree,
+.tree-transfer-vue3 .transfer-right .transfer-main .el-tree {
   overflow-x: auto;
 }
 
-.tree-transfer .transfer-center {
+.tree-transfer-vue3 .transfer-center {
   flex: 1;
   min-width: 48px;
   display: flex;
@@ -819,21 +819,21 @@ defineExpose({
   align-items: center;
 }
 
-.tree-transfer .transfer-center .el-button + .el-button {
+.tree-transfer-vue3 .transfer-center .el-button + .el-button {
   margin-left: 0;
   margin-top: 12px;
 }
 
-.tree-transfer .transfer-center :deep(.el-button.hide-txt) [class*='el-icon'] + span {
+.tree-transfer-vue3 .transfer-center :deep(.el-button.hide-txt) [class*='el-icon'] + span {
   margin-left: 0;
 }
 </style>
 <!-- <style>
 /* 更改警告框位置 */
-.el-form-item.is-error .tree-transfer .el-input .el-input__wrapper.is-focus, .el-form-item.is-error .tree-transfer .el-input .el-input__wrapper.focus, .el-form-item.is-error .tree-transfer .el-input .el-input__wrapper:focus, .el-form-item.is-error .tree-transfer .el-input .el-input__wrapper:hover {
+.el-form-item.is-error .tree-transfer-vue3 .el-input .el-input__wrapper.is-focus, .el-form-item.is-error .tree-transfer-vue3 .el-input .el-input__wrapper.focus, .el-form-item.is-error .tree-transfer-vue3 .el-input .el-input__wrapper:focus, .el-form-item.is-error .tree-transfer-vue3 .el-input .el-input__wrapper:hover {
   box-shadow: 0 0 0 1px transparent inset;
 }
-.el-form-item.is-error .tree-transfer .transfer-right {
+.el-form-item.is-error .tree-transfer-vue3 .transfer-right {
   border: 1px solid var(--el-color-danger) !important;
 }
 </style> -->
