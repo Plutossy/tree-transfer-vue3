@@ -10,7 +10,11 @@ tree-transfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件
 此组件功能类似于`element-plus`的[transfer](https://element-plus.org/zh-CN/component/transfer.html)组件，但是里面的数据是树形结构！
 实际上，tree-transfer-vue3 依赖的 element-plus 组件分别是[Checkbox 多选框](https://element-plus.org/zh-CN/component/checkbox.html)，[Button 按钮](https://element-plus.org/zh-CN/component/button.html)，和最主要的[Tree 树形控件](https://element-plus.org/zh-CN/component/tree.html)写成！并非是在 element-plus 的穿梭框组件上的扩展，而仅仅是参照了其外观样式和功能。
 
-我命油我不油天，仿写一个 vue3 版本的树形穿梭框组件玩玩，请使用最新版本；参考[el-tree-transfer](https://www.npmjs.com/package/el-tree-transfer)
+我命油我不油天，仿写一个 vue3 版本的树形穿梭框组件玩玩；参考[el-tree-transfer](https://www.npmjs.com/package/el-tree-transfer)
+
+**重要更新**（_请使用最新版本_）
+
+> 1.2.1 处理 defaultProps 改变（非默认值），数据不显示的问题
 
 ### [NPM](https://www.npmjs.com/package/tree-transfer-vue3) - [GitHub](https://github.com/Plutossy/tree-transfer-vue3) - [CSDN](https://blog.csdn.net/Pluto_ssy/article/details/143627575)
 
@@ -216,19 +220,20 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 
 ## 插槽
 
-| 插槽名            | 说明                      |
-| ----------------- | ------------------------- |
-| from-title        | from 穿梭框顶部标题       |
-| to-title          | to 穿梭框顶部标题         |
-| from-tree-content | from 穿梭框 tree 节点内容 |
-| to-tree-content   | to 穿梭框 tree 节点内容   |
-| from-footer       | from 穿梭框底部           |
-| to-footer         | to 穿梭框底部             |
+| 插槽名            | 说明                                                        |
+| ----------------- | ----------------------------------------------------------- |
+| from-title        | from 穿梭框顶部标题                                         |
+| to-title          | to 穿梭框顶部标题                                           |
+| from-tree-content | from 穿梭框 tree 节点内容（节点 node、数据 data，两个参数） |
+| to-tree-content   | to 穿梭框 tree 节点内容（节点 node、数据 data，两个参数）   |
+| from-footer       | from 穿梭框底部                                             |
+| to-footer         | to 穿梭框底部                                               |
 
 ## 版本说明
 
 > **1.1.0** 添加说明文档，更新事件、方法、插槽
 > **1.2.0** 导出方式修改，页面样式修改，请使用最新版本
+> **1.2.1** 处理 defaultProps 改变（非默认值），数据不显示的问题
 
 ## [GitHub demo 代码地址](https://github.com/Plutossy/tree-transfer-vue3) 欢迎 star 谢谢
 

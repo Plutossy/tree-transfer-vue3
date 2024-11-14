@@ -4,10 +4,10 @@
     v-model:fromData="fromData"
     v-model:toData="toData"
     :defaultProps="{
-      id: 'id', // 节点id
+      id: 'uid', // 节点id
       parentId: 'parentId', // 父节点id
-      label: 'label',
-      children: 'children',
+      label: 'ulabel',
+      children: 'childs',
       disabled: 'disabled',
     }"
     rootPid="0"
@@ -23,75 +23,75 @@ import TreeTransferVue3 from '../tree-transfer-vue3/tree-transfer-vue3.js'; // �
 const transferRef = ref(null); // 穿梭框Ref
 const fromData = ref([
   {
-    id: '1',
+    uid: '1',
     parentId: 0,
-    label: '一级 1',
-    children: [
+    ulabel: '一级 1',
+    childs: [
       {
-        id: '1-1',
+        uid: '1-1',
         parentId: '1',
-        label: '二级 1-1',
-        children: [],
+        ulabel: '二级 1-1',
+        childs: [],
       },
       {
-        id: '1-2',
+        uid: '1-2',
         parentId: '1',
-        label: '二级 1-2',
-        children: [
+        ulabel: '二级 1-2',
+        childs: [
           {
-            id: '1-2-1',
+            uid: '1-2-1',
             parentId: '1-2',
             disabled: true,
-            children: [],
-            label: '二级 1-2-1',
+            childs: [],
+            ulabel: '二级 1-2-1',
           },
           {
-            id: '1-2-2',
+            uid: '1-2-2',
             parentId: '1-2',
-            children: [],
-            label: '二级 1-2-2',
+            childs: [],
+            ulabel: '二级 1-2-2',
           },
           {
-            id: '1-2-3',
+            uid: '1-2-3',
             parentId: '1-2',
-            children: [],
-            label: '二级 1-2-3',
+            childs: [],
+            ulabel: '二级 1-2-3',
           },
         ],
       },
     ],
   },
   {
-    id: '2',
+    uid: '2',
     parentId: 0,
-    label: '一级 2',
-    children: [
+    ulabel: '一级 2',
+    childs: [
       {
-        id: '2-1',
+        uid: '2-1',
         parentId: '2',
-        label: '二级 2-1',
+        ulabel: '二级 2-1',
       },
       {
-        id: '2-2',
+        uid: '2-2',
         parentId: '2',
-        label: '二级 2-2',
+        ulabel: '二级 2-2',
       },
     ],
   },
   {
-    id: '4',
+    uid: '4',
     parentId: 0,
-    label: '一级 4',
-    children: [
+    ulabel: '一级 4',
+    childs: [
       {
-        id: '4-1',
+        uid: '4-1',
         parentId: '4',
-        label: '二级 4-1',
+        ulabel: '二级 4-1',
       },
       {
-        id: '4-2',
+        uid: '4-2',
         parentId: '4',
-        label: '二级 4-2',
+        ulabel: '二级 4-2',
       },
     ],
   },

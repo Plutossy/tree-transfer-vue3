@@ -1,4 +1,4 @@
-(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".tree-transfer-vue3[data-v-48edd3af]{background-color:#fff;min-width:560px;min-height:400px;display:flex}.tree-transfer-vue3 .transfer-left[data-v-48edd3af],.tree-transfer-vue3 .transfer-right[data-v-48edd3af]{width:45%;border:1px solid #ebeef5}.tree-transfer-vue3 .transfer-left .transfer-title[data-v-48edd3af],.tree-transfer-vue3 .transfer-right .transfer-title[data-v-48edd3af]{display:flex;align-items:center;background-color:#f5f7fa;padding:6px 10px}.tree-transfer-vue3 .transfer-left .transfer-title>span[data-v-48edd3af],.tree-transfer-vue3 .transfer-right .transfer-title>span[data-v-48edd3af]{margin-left:8px}.tree-transfer-vue3 .transfer-left .transfer-main[data-v-48edd3af],.tree-transfer-vue3 .transfer-right .transfer-main[data-v-48edd3af]{margin:10px}.tree-transfer-vue3 .transfer-left .transfer-main .filter-tree[data-v-48edd3af],.tree-transfer-vue3 .transfer-right .transfer-main .filter-tree[data-v-48edd3af]{margin-bottom:8px}.tree-transfer-vue3 .transfer-left .transfer-main .el-tree[data-v-48edd3af],.tree-transfer-vue3 .transfer-right .transfer-main .el-tree[data-v-48edd3af]{overflow-x:auto}.tree-transfer-vue3 .transfer-center[data-v-48edd3af]{flex:1;min-width:48px;display:flex;flex-direction:column;justify-content:center;align-items:center}.tree-transfer-vue3 .transfer-center .el-button+.el-button[data-v-48edd3af]{margin-left:0;margin-top:12px}.tree-transfer-vue3 .transfer-center[data-v-48edd3af] .el-button.hide-txt [class*=el-icon]+span{margin-left:0}"));  elementStyle.id = "tree-transfer-vue3"; document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { getCurrentScope, onScopeDispose, shallowRef, watchEffect, readonly, unref, getCurrentInstance, onMounted, nextTick, watch, ref, defineComponent, openBlock, createElementBlock, createElementVNode, warn, computed, inject, isRef, mergeProps, renderSlot, toRef, onUnmounted, useAttrs as useAttrs$1, useSlots, normalizeClass, normalizeStyle, createCommentVNode, Fragment, createBlock, withCtx, resolveDynamicComponent, withModifiers, createVNode, toDisplayString, Text, provide, reactive, toRaw, withDirectives, vModelCheckbox, createTextVNode, toRefs, Transition, toHandlers, h, resolveComponent, renderList, vShow, onUpdated, mergeModels, useModel } from "vue";
+(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".tree-transfer-vue3[data-v-54b932da]{background-color:#fff;min-width:560px;min-height:400px;display:flex}.tree-transfer-vue3 .transfer-left[data-v-54b932da],.tree-transfer-vue3 .transfer-right[data-v-54b932da]{width:45%;border:1px solid #ebeef5}.tree-transfer-vue3 .transfer-left .transfer-title[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-title[data-v-54b932da]{display:flex;align-items:center;background-color:#f5f7fa;padding:6px 10px}.tree-transfer-vue3 .transfer-left .transfer-title>span[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-title>span[data-v-54b932da]{margin-left:8px}.tree-transfer-vue3 .transfer-left .transfer-main[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main[data-v-54b932da]{margin:10px}.tree-transfer-vue3 .transfer-left .transfer-main .filter-tree[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main .filter-tree[data-v-54b932da]{margin-bottom:8px}.tree-transfer-vue3 .transfer-left .transfer-main .el-tree[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main .el-tree[data-v-54b932da]{overflow-x:auto}.tree-transfer-vue3 .transfer-center[data-v-54b932da]{flex:1;min-width:48px;display:flex;flex-direction:column;justify-content:center;align-items:center}.tree-transfer-vue3 .transfer-center .el-button+.el-button[data-v-54b932da]{margin-left:0;margin-top:12px}.tree-transfer-vue3 .transfer-center[data-v-54b932da] .el-button.hide-txt [class*=el-icon]+span{margin-left:0}"));  elementStyle.id = "tree-transfer-vue3"; document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { getCurrentScope, onScopeDispose, shallowRef, watchEffect, readonly, unref, getCurrentInstance, onMounted, nextTick, watch, ref, defineComponent, openBlock, createElementBlock, createElementVNode, warn, computed, inject, isRef, mergeProps, renderSlot, toRef, onUnmounted, useAttrs as useAttrs$1, useSlots, normalizeClass, normalizeStyle, createCommentVNode, Fragment, createBlock, withCtx, resolveDynamicComponent, withModifiers, createVNode, toDisplayString, Text, provide, reactive, toRaw, withDirectives, vModelCheckbox, createTextVNode, toRefs, Transition, toHandlers, h, resolveComponent, renderList, vShow, onUpdated, mergeModels, useModel } from "vue";
 var __defProp$9 = Object.defineProperty;
 var __defProps$6 = Object.defineProperties;
 var __getOwnPropDescs$6 = Object.getOwnPropertyDescriptors;
@@ -6241,15 +6241,17 @@ const _sfc_main = {
     /* 树节点的属性配置 */
     defaultProps: {
       type: Object,
-      default: () => ({
-        id: "id",
-        // 节点id
-        parentId: "parentId",
-        // 父节点id
-        label: "label",
-        children: "children",
-        disabled: "disabled"
-      })
+      default: () => {
+        return {
+          id: "id",
+          // 节点id
+          parentId: "parentId",
+          // 父节点id
+          label: "label",
+          children: "children",
+          disabled: "disabled"
+        };
+      }
     },
     /* 根节点pid，用于结束递归 */
     rootPid: {
@@ -6838,7 +6840,7 @@ const _sfc_main = {
                     node,
                     data
                   }, () => [
-                    createElementVNode("span", null, toDisplayString(node[__props.defaultProps.label]), 1)
+                    createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
                   ], true)
                 ])
               ]),
@@ -6933,7 +6935,7 @@ const _sfc_main = {
                     node,
                     data
                   }, () => [
-                    createElementVNode("span", null, toDisplayString(node[__props.defaultProps.label]), 1)
+                    createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
                   ], true)
                 ])
               ]),
@@ -6946,7 +6948,7 @@ const _sfc_main = {
     };
   }
 };
-const TreeTransferVue3 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-48edd3af"]]);
+const TreeTransferVue3 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-54b932da"]]);
 export {
   TreeTransferVue3 as default
 };

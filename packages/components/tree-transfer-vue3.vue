@@ -44,7 +44,8 @@
           <template #default="{ node, data }">
             <span class="custom-tree-node">
               <slot name="from-tree-content" :node="node" :data="data">
-                <span>{{ node[defaultProps.label] }}</span>
+                <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
+                <span>{{ data[defaultProps.label] }}</span>
               </slot>
             </span>
           </template>
@@ -105,7 +106,8 @@
           <template #default="{ node, data }">
             <span class="custom-tree-node">
               <slot name="to-tree-content" :node="node" :data="data">
-                <span>{{ node[defaultProps.label] }}</span>
+                <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
+                <span>{{ data[defaultProps.label] }}</span>
               </slot>
             </span>
           </template>
@@ -159,13 +161,15 @@ const props = defineProps({
   /* 树节点的属性配置 */
   defaultProps: {
     type: Object,
-    default: () => ({
-      id: 'id', // 节点id
-      parentId: 'parentId', // 父节点id
-      label: 'label',
-      children: 'children',
-      disabled: 'disabled',
-    }),
+    default: () => {
+      return {
+        id: 'id', // 节点id
+        parentId: 'parentId', // 父节点id
+        label: 'label',
+        children: 'children',
+        disabled: 'disabled',
+      };
+    },
   },
   /* 根节点pid，用于结束递归 */
   rootPid: {
