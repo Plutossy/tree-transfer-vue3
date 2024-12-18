@@ -148,6 +148,7 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 
 | 属性名            | 说明                                                                            | 类型                | 默认值                 |
 | ----------------- | ------------------------------------------------------------------------------- | ------------------- | ---------------------- |
+| language          | 语言（默认中文，可选：zh-cn、en）                                               | _String_            | zh-cn                  |
 | titleList         | 标题列表                                                                        | _Array_             | ['源列表', '目标列表'] |
 | showFilter        | 是否显示过滤框                                                                  | _Boolean_           | true                   |
 | placeholder       | 搜索框提示文字（注意：如果 placeholderList 里面有值，优先采用 placeholderList） | _String_            | 请输入关键字搜索       |
@@ -232,8 +233,12 @@ const handleremove = (_fromData, _toData, { checkedKeys, checkedNodes, harfKeys,
 ## 版本说明
 
 > **1.1.0** 添加说明文档，更新事件、方法、插槽
+
 > **1.2.0** 导出方式修改，页面样式修改，请使用最新版本
+
 > **1.2.1** 处理 defaultProps 改变（非默认值），数据不显示的问题
+
+> **1.2.2** 语言功能
 
 ## [GitHub demo 代码地址](https://github.com/Plutossy/tree-transfer-vue3) 欢迎 star 谢谢
 

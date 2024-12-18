@@ -1,124 +1,129 @@
 <template>
-  <div class="tree-transfer-vue3">
-    <!-- 左侧穿梭框 原料框 -->
-    <div class="transfer-left">
-      <div class="transfer-title">
-        <el-checkbox v-model="fromCheckAll" :indeterminate="fromIndeterminate" @change="fromCheckAllChange" />
-        <slot name="from-title">
-          <span>{{ titleList[0] }}</span>
-        </slot>
+  <el-config-provider :locale="locale">
+    <div class="tree-transfer-vue3">
+      <!-- 左侧穿梭框 原料框 -->
+      <div class="transfer-left">
+        <div class="transfer-title">
+          <el-checkbox v-model="fromCheckAll" :indeterminate="fromIndeterminate" @change="fromCheckAllChange" />
+          <slot name="from-title">
+            <span>{{ titleList[0] }}</span>
+          </slot>
+        </div>
+        <!-- 内容区 -->
+        <div class="transfer-main">
+          <el-input v-if="showFilter" v-model="filterFrom" clearable :placeholder="placeholderList[0] || placeholder" class="filter-tree" />
+          <el-tree
+            ref="fromTreeRef"
+            show-checkbox
+            :data="fromData"
+            :node-key="defaultProps.id"
+            :props="defaultProps"
+            :render-after-expand="renderAfterExpand"
+            :load="load"
+            :render-content="fromRenderContent"
+            :highlight-current="highlightCurrent"
+            :default-expand-all="defaultExpandAll"
+            :expand-on-click-node="expandOnClickNode"
+            :check-on-click-node="checkOnClickNode"
+            :auto-expand-parent="autoExpandParent"
+            :check-strictly="checkStrictly"
+            :filter-node-method="fromFilterNodeMethod"
+            :accordion="accordion"
+            :indent="indent"
+            :icon="icon"
+            :lazy="lazy"
+            :draggable="draggable"
+            :allow-drag="fromAllowDrag"
+            @node-drag-start="fromNodeDragStart"
+            @node-drag-enter="fromNodeDragEnter"
+            @node-drag-leave="fromNodeDragLeave"
+            @node-drag-over="fromNodeDragOver"
+            @node-drag-end="fromNodeDragEnd"
+            @node-drop="fromNodeDrop"
+            @check="fromCheck"
+          >
+            <template #default="{ node, data }">
+              <span class="custom-tree-node">
+                <slot name="from-tree-content" :node="node" :data="data">
+                  <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
+                  <span>{{ data[defaultProps.label] }}</span>
+                </slot>
+              </span>
+            </template>
+          </el-tree>
+          <slot name="from-footer"></slot>
+        </div>
       </div>
-      <!-- 内容区 -->
-      <div class="transfer-main">
-        <el-input v-if="showFilter" v-model="filterFrom" clearable :placeholder="placeholderList[0] || placeholder" class="filter-tree" />
-        <el-tree
-          ref="fromTreeRef"
-          show-checkbox
-          :data="fromData"
-          :node-key="defaultProps.id"
-          :props="defaultProps"
-          :render-after-expand="renderAfterExpand"
-          :load="load"
-          :render-content="fromRenderContent"
-          :highlight-current="highlightCurrent"
-          :default-expand-all="defaultExpandAll"
-          :expand-on-click-node="expandOnClickNode"
-          :check-on-click-node="checkOnClickNode"
-          :auto-expand-parent="autoExpandParent"
-          :check-strictly="checkStrictly"
-          :filter-node-method="fromFilterNodeMethod"
-          :accordion="accordion"
-          :indent="indent"
-          :icon="icon"
-          :lazy="lazy"
-          :draggable="draggable"
-          :allow-drag="fromAllowDrag"
-          @node-drag-start="fromNodeDragStart"
-          @node-drag-enter="fromNodeDragEnter"
-          @node-drag-leave="fromNodeDragLeave"
-          @node-drag-over="fromNodeDragOver"
-          @node-drag-end="fromNodeDragEnd"
-          @node-drop="fromNodeDrop"
-          @check="fromCheck"
-        >
-          <template #default="{ node, data }">
-            <span class="custom-tree-node">
-              <slot name="from-tree-content" :node="node" :data="data">
-                <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
-                <span>{{ data[defaultProps.label] }}</span>
-              </slot>
-            </span>
-          </template>
-        </el-tree>
-        <slot name="from-footer"></slot>
+      <!-- 穿梭区 按钮框 -->
+      <div class="transfer-center">
+        <el-button type="primary" :icon="ArrowRight" :circle="!showBtnTxt" :class="{ 'hide-txt': !showBtnTxt }" :disabled="fromDisabled" @click="addToAims(true)">
+          {{ showBtnTxt ? btnTitleList[0] : '' }}
+        </el-button>
+        <el-button type="primary" :icon="ArrowLeft" :circle="!showBtnTxt" :class="{ 'hide-txt': !showBtnTxt }" :disabled="toDisabled" @click="removeToSource(true)">
+          {{ showBtnTxt ? btnTitleList[1] : '' }}
+        </el-button>
+      </div>
+      <!-- 右侧穿梭框 目标框 -->
+      <div class="transfer-right">
+        <div class="transfer-title">
+          <el-checkbox v-model="toCheckAll" :indeterminate="toIndeterminate" @change="toCheckAllChange" />
+          <slot name="to-title">
+            <span>{{ titleList[1] }}</span>
+          </slot>
+        </div>
+        <!-- 内容区 -->
+        <div class="transfer-main">
+          <el-input v-if="showFilter" clearable v-model="filterTo" :placeholder="placeholderList[1] || placeholder" class="filter-tree" />
+          <el-tree
+            ref="toTreeRef"
+            show-checkbox
+            :data="toData"
+            :node-key="defaultProps.id"
+            :props="defaultProps"
+            :render-after-expand="renderAfterExpand"
+            :load="load"
+            :render-content="toRenderContent"
+            :highlight-current="highlightCurrent"
+            :default-expand-all="defaultExpandAll"
+            :expand-on-click-node="expandOnClickNode"
+            :check-on-click-node="checkOnClickNode"
+            :auto-expand-parent="autoExpandParent"
+            :check-strictly="checkStrictly"
+            :filter-node-method="toFilterNodeMethod"
+            :accordion="accordion"
+            :indent="indent"
+            :icon="icon"
+            :lazy="lazy"
+            :draggable="draggable"
+            :allow-drag="toAllowDrag"
+            @node-drag-start="toNodeDragStart"
+            @node-drag-enter="toNodeDragEnter"
+            @node-drag-leave="toNodeDragLeave"
+            @node-drag-over="toNodeDragOver"
+            @node-drag-end="toNodeDragEnd"
+            @node-drop="toNodeDrop"
+            @check="toCheck"
+          >
+            <template #default="{ node, data }">
+              <span class="custom-tree-node">
+                <slot name="to-tree-content" :node="node" :data="data">
+                  <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
+                  <span>{{ data[defaultProps.label] }}</span>
+                </slot>
+              </span>
+            </template>
+          </el-tree>
+          <slot name="to-footer"></slot>
+        </div>
       </div>
     </div>
-    <!-- 穿梭区 按钮框 -->
-    <div class="transfer-center">
-      <el-button type="primary" :icon="ArrowRight" :circle="!showBtnTxt" :class="{ 'hide-txt': !showBtnTxt }" :disabled="fromDisabled" @click="addToAims(true)">
-        {{ showBtnTxt ? btnTitleList[0] : '' }}
-      </el-button>
-      <el-button type="primary" :icon="ArrowLeft" :circle="!showBtnTxt" :class="{ 'hide-txt': !showBtnTxt }" :disabled="toDisabled" @click="removeToSource(true)">
-        {{ showBtnTxt ? btnTitleList[1] : '' }}
-      </el-button>
-    </div>
-    <!-- 右侧穿梭框 目标框 -->
-    <div class="transfer-right">
-      <div class="transfer-title">
-        <el-checkbox v-model="toCheckAll" :indeterminate="toIndeterminate" @change="toCheckAllChange" />
-        <slot name="to-title">
-          <span>{{ titleList[1] }}</span>
-        </slot>
-      </div>
-      <!-- 内容区 -->
-      <div class="transfer-main">
-        <el-input v-if="showFilter" clearable v-model="filterTo" :placeholder="placeholderList[1] || placeholder" class="filter-tree" />
-        <el-tree
-          ref="toTreeRef"
-          show-checkbox
-          :data="toData"
-          :node-key="defaultProps.id"
-          :props="defaultProps"
-          :render-after-expand="renderAfterExpand"
-          :load="load"
-          :render-content="toRenderContent"
-          :highlight-current="highlightCurrent"
-          :default-expand-all="defaultExpandAll"
-          :expand-on-click-node="expandOnClickNode"
-          :check-on-click-node="checkOnClickNode"
-          :auto-expand-parent="autoExpandParent"
-          :check-strictly="checkStrictly"
-          :filter-node-method="toFilterNodeMethod"
-          :accordion="accordion"
-          :indent="indent"
-          :icon="icon"
-          :lazy="lazy"
-          :draggable="draggable"
-          :allow-drag="toAllowDrag"
-          @node-drag-start="toNodeDragStart"
-          @node-drag-enter="toNodeDragEnter"
-          @node-drag-leave="toNodeDragLeave"
-          @node-drag-over="toNodeDragOver"
-          @node-drag-end="toNodeDragEnd"
-          @node-drop="toNodeDrop"
-          @check="toCheck"
-        >
-          <template #default="{ node, data }">
-            <span class="custom-tree-node">
-              <slot name="to-tree-content" :node="node" :data="data">
-                <!-- 处理defaultProps不是默认值，数据不显示的问题;改用data -->
-                <span>{{ data[defaultProps.label] }}</span>
-              </slot>
-            </span>
-          </template>
-        </el-tree>
-        <slot name="to-footer"></slot>
-      </div>
-    </div>
-  </div>
+  </el-config-provider>
 </template>
 
 <script name="TreeTransferVue3" setup>
+import { ElConfigProvider } from 'element-plus';
+import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
+import en from 'element-plus/dist/locale/en.mjs';
 import { ref, defineComponent, defineProps, defineEmits, defineExpose, computed, watch, nextTick } from 'vue';
 import { ElTree, ElCheckbox, ElInput, ElButton } from 'element-plus';
 import { ArrowRight, ArrowLeft } from '@element-plus/icons-vue';
@@ -128,6 +133,10 @@ defineComponent({
   name: 'TreeTransferVue3',
 });
 const props = defineProps({
+  language: {
+    type: String,
+    default: 'zh-cn', // zh-cn en
+  },
   /* 标题 */
   titleList: {
     type: Array,
@@ -381,6 +390,10 @@ const filterTo = ref('');
 // 按钮禁用相关
 const fromDisabled = computed(() => fromCheckNode.value.length === 0);
 const toDisabled = computed(() => toCheckNode.value.length === 0);
+
+const locale = computed(() => {
+  return props.language === 'zh-cn' ? zhCn : en;
+});
 
 watch(
   fromCheckNode,

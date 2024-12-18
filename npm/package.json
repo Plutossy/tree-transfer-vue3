@@ -1,6 +1,6 @@
 {
   "name": "tree-transfer-vue3",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "tree-fransfer-vue3 是一个基于 VUE 和 element-plus 的树形穿梭框组件，使用前请确认已经引入element-plus！ 此组件功能类似于element-plus的transfer组件，但是里面的数据是树形结构！ ",
   "keywords": [
     "transfer",

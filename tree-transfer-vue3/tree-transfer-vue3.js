@@ -1,4 +1,4 @@
-(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".tree-transfer-vue3[data-v-54b932da]{background-color:#fff;min-width:560px;min-height:400px;display:flex}.tree-transfer-vue3 .transfer-left[data-v-54b932da],.tree-transfer-vue3 .transfer-right[data-v-54b932da]{width:45%;border:1px solid #ebeef5}.tree-transfer-vue3 .transfer-left .transfer-title[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-title[data-v-54b932da]{display:flex;align-items:center;background-color:#f5f7fa;padding:6px 10px}.tree-transfer-vue3 .transfer-left .transfer-title>span[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-title>span[data-v-54b932da]{margin-left:8px}.tree-transfer-vue3 .transfer-left .transfer-main[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main[data-v-54b932da]{margin:10px}.tree-transfer-vue3 .transfer-left .transfer-main .filter-tree[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main .filter-tree[data-v-54b932da]{margin-bottom:8px}.tree-transfer-vue3 .transfer-left .transfer-main .el-tree[data-v-54b932da],.tree-transfer-vue3 .transfer-right .transfer-main .el-tree[data-v-54b932da]{overflow-x:auto}.tree-transfer-vue3 .transfer-center[data-v-54b932da]{flex:1;min-width:48px;display:flex;flex-direction:column;justify-content:center;align-items:center}.tree-transfer-vue3 .transfer-center .el-button+.el-button[data-v-54b932da]{margin-left:0;margin-top:12px}.tree-transfer-vue3 .transfer-center[data-v-54b932da] .el-button.hide-txt [class*=el-icon]+span{margin-left:0}"));  elementStyle.id = "tree-transfer-vue3"; document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { getCurrentScope, onScopeDispose, shallowRef, watchEffect, readonly, unref, getCurrentInstance, onMounted, nextTick, watch, ref, defineComponent, openBlock, createElementBlock, createElementVNode, warn, computed, inject, isRef, mergeProps, renderSlot, toRef, onUnmounted, useAttrs as useAttrs$1, useSlots, normalizeClass, normalizeStyle, createCommentVNode, Fragment, createBlock, withCtx, resolveDynamicComponent, withModifiers, createVNode, toDisplayString, Text, provide, reactive, toRaw, withDirectives, vModelCheckbox, createTextVNode, toRefs, Transition, toHandlers, h, resolveComponent, renderList, vShow, onUpdated, mergeModels, useModel } from "vue";
+(function(){ try {var elementStyle = document.createElement('style'); elementStyle.appendChild(document.createTextNode(".tree-transfer-vue3[data-v-2ce0a2f8]{background-color:#fff;min-width:560px;min-height:400px;display:flex}.tree-transfer-vue3 .transfer-left[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right[data-v-2ce0a2f8]{width:45%;border:1px solid #ebeef5}.tree-transfer-vue3 .transfer-left .transfer-title[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right .transfer-title[data-v-2ce0a2f8]{display:flex;align-items:center;background-color:#f5f7fa;padding:6px 10px}.tree-transfer-vue3 .transfer-left .transfer-title>span[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right .transfer-title>span[data-v-2ce0a2f8]{margin-left:8px}.tree-transfer-vue3 .transfer-left .transfer-main[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right .transfer-main[data-v-2ce0a2f8]{margin:10px}.tree-transfer-vue3 .transfer-left .transfer-main .filter-tree[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right .transfer-main .filter-tree[data-v-2ce0a2f8]{margin-bottom:8px}.tree-transfer-vue3 .transfer-left .transfer-main .el-tree[data-v-2ce0a2f8],.tree-transfer-vue3 .transfer-right .transfer-main .el-tree[data-v-2ce0a2f8]{overflow-x:auto}.tree-transfer-vue3 .transfer-center[data-v-2ce0a2f8]{flex:1;min-width:48px;display:flex;flex-direction:column;justify-content:center;align-items:center}.tree-transfer-vue3 .transfer-center .el-button+.el-button[data-v-2ce0a2f8]{margin-left:0;margin-top:12px}.tree-transfer-vue3 .transfer-center[data-v-2ce0a2f8] .el-button.hide-txt [class*=el-icon]+span{margin-left:0}"));  elementStyle.id = "tree-transfer-vue3"; document.head.appendChild(elementStyle);} catch(e) {console.error('vite-plugin-css-injected-by-js', e);} })();import { getCurrentScope, onScopeDispose, shallowRef, watchEffect, readonly, unref, getCurrentInstance, onMounted, nextTick, watch, ref, defineComponent, openBlock, createElementBlock, createElementVNode, warn, computed, inject, isRef, provide, renderSlot, mergeProps, toRef, onUnmounted, useAttrs as useAttrs$1, useSlots, normalizeClass, normalizeStyle, createCommentVNode, Fragment, createBlock, withCtx, resolveDynamicComponent, withModifiers, createVNode, toDisplayString, Text, reactive, toRaw, withDirectives, vModelCheckbox, createTextVNode, toRefs, Transition, toHandlers, h, resolveComponent, renderList, vShow, onUpdated, mergeModels, useModel } from "vue";
 var __defProp$9 = Object.defineProperty;
 var __defProps$6 = Object.defineProperties;
 var __getOwnPropDescs$6 = Object.getOwnPropertyDescriptors;
@@ -1244,6 +1244,7 @@ const isStringNumber = (val) => {
   }
   return !Number.isNaN(Number(val));
 };
+const keysOf = (arr) => Object.keys(arr);
 class ElementPlusError extends Error {
   constructor(m) {
     super(m);
@@ -1832,6 +1833,8 @@ usage: app.provide(ID_INJECTION_KEY, {
   const idRef = computedEager(() => unref(deterministicId) || `${namespace.value}-id-${idInjection.prefix}-${idInjection.current++}`);
   return idRef;
 };
+ref(0);
+const zIndexContextKey = Symbol("zIndexContextKey");
 function useCursor(input) {
   let selectionInfo;
   function recordCursor() {
@@ -1976,6 +1979,15 @@ function useComposition({
     handleCompositionEnd
   };
 }
+const emptyValuesContextKey = Symbol("emptyValuesContextKey");
+const useEmptyValuesProps = buildProps({
+  emptyValues: Array,
+  valueOnClear: {
+    type: [String, Number, Boolean, Function],
+    default: void 0,
+    validator: (val) => isFunction$1(val) ? !val() : !val
+  }
+});
 const ariaProps = buildProps({
   ariaLabel: String,
   ariaOrientation: {
@@ -1991,13 +2003,96 @@ const configProviderContextKey = Symbol();
 const globalConfig = ref();
 function useGlobalConfig(key, defaultValue = void 0) {
   const config = getCurrentInstance() ? inject(configProviderContextKey, globalConfig) : globalConfig;
-  {
+  if (key) {
     return computed(() => {
       var _a2, _b;
       return (_b = (_a2 = config.value) == null ? void 0 : _a2[key]) != null ? _b : defaultValue;
     });
+  } else {
+    return config;
   }
 }
+const provideGlobalConfig = (config, app, global2 = false) => {
+  var _a2;
+  const inSetup = !!getCurrentInstance();
+  const oldConfig = inSetup ? useGlobalConfig() : void 0;
+  const provideFn = (_a2 = void 0) != null ? _a2 : inSetup ? provide : void 0;
+  if (!provideFn) {
+    debugWarn("provideGlobalConfig", "provideGlobalConfig() can only be used inside setup().");
+    return;
+  }
+  const context = computed(() => {
+    const cfg = unref(config);
+    if (!(oldConfig == null ? void 0 : oldConfig.value))
+      return cfg;
+    return mergeConfig(oldConfig.value, cfg);
+  });
+  provideFn(configProviderContextKey, context);
+  provideFn(localeContextKey, computed(() => context.value.locale));
+  provideFn(namespaceContextKey, computed(() => context.value.namespace));
+  provideFn(zIndexContextKey, computed(() => context.value.zIndex));
+  provideFn(SIZE_INJECTION_KEY, {
+    size: computed(() => context.value.size || "")
+  });
+  provideFn(emptyValuesContextKey, computed(() => ({
+    emptyValues: context.value.emptyValues,
+    valueOnClear: context.value.valueOnClear
+  })));
+  if (global2 || !globalConfig.value) {
+    globalConfig.value = context.value;
+  }
+  return context;
+};
+const mergeConfig = (a, b) => {
+  const keys2 = [.../* @__PURE__ */ new Set([...keysOf(a), ...keysOf(b)])];
+  const obj = {};
+  for (const key of keys2) {
+    obj[key] = b[key] !== void 0 ? b[key] : a[key];
+  }
+  return obj;
+};
+const configProviderProps = buildProps({
+  a11y: {
+    type: Boolean,
+    default: true
+  },
+  locale: {
+    type: definePropType(Object)
+  },
+  size: useSizeProp,
+  button: {
+    type: definePropType(Object)
+  },
+  experimentalFeatures: {
+    type: definePropType(Object)
+  },
+  keyboardNavigation: {
+    type: Boolean,
+    default: true
+  },
+  message: {
+    type: definePropType(Object)
+  },
+  zIndex: Number,
+  namespace: {
+    type: String,
+    default: "el"
+  },
+  ...useEmptyValuesProps
+});
+const messageConfig = {};
+const ConfigProvider = defineComponent({
+  name: "ElConfigProvider",
+  props: configProviderProps,
+  setup(props, { slots }) {
+    watch(() => props.message, (val) => {
+      Object.assign(messageConfig, val != null ? val : {});
+    }, { immediate: true, deep: true });
+    const config = provideGlobalConfig(props);
+    return () => renderSlot(slots, "default", { config: config == null ? void 0 : config.value });
+  }
+});
+const ElConfigProvider = withInstall(ConfigProvider);
 var _export_sfc$1 = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -6179,6 +6274,365 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
 }
 var Tree = /* @__PURE__ */ _export_sfc$1(_sfc_main$1, [["render", _sfc_render], ["__file", "tree.vue"]]);
 const ElTree = withInstall(Tree);
+/*! Element Plus v2.8.7 */
+var zhCn = {
+  name: "zh-cn",
+  el: {
+    breadcrumb: {
+      label: "面包屑"
+    },
+    colorpicker: {
+      confirm: "确定",
+      clear: "清空",
+      defaultLabel: "颜色选择器",
+      description: "当前颜色 {color}，按 Enter 键选择新颜色",
+      alphaLabel: "选择透明度的值"
+    },
+    datepicker: {
+      now: "此刻",
+      today: "今天",
+      cancel: "取消",
+      clear: "清空",
+      confirm: "确定",
+      dateTablePrompt: "使用方向键与 Enter 键可选择日期",
+      monthTablePrompt: "使用方向键与 Enter 键可选择月份",
+      yearTablePrompt: "使用方向键与 Enter 键可选择年份",
+      selectedDate: "已选日期",
+      selectDate: "选择日期",
+      selectTime: "选择时间",
+      startDate: "开始日期",
+      startTime: "开始时间",
+      endDate: "结束日期",
+      endTime: "结束时间",
+      prevYear: "前一年",
+      nextYear: "后一年",
+      prevMonth: "上个月",
+      nextMonth: "下个月",
+      year: "年",
+      month1: "1 月",
+      month2: "2 月",
+      month3: "3 月",
+      month4: "4 月",
+      month5: "5 月",
+      month6: "6 月",
+      month7: "7 月",
+      month8: "8 月",
+      month9: "9 月",
+      month10: "10 月",
+      month11: "11 月",
+      month12: "12 月",
+      weeks: {
+        sun: "日",
+        mon: "一",
+        tue: "二",
+        wed: "三",
+        thu: "四",
+        fri: "五",
+        sat: "六"
+      },
+      weeksFull: {
+        sun: "星期日",
+        mon: "星期一",
+        tue: "星期二",
+        wed: "星期三",
+        thu: "星期四",
+        fri: "星期五",
+        sat: "星期六"
+      },
+      months: {
+        jan: "一月",
+        feb: "二月",
+        mar: "三月",
+        apr: "四月",
+        may: "五月",
+        jun: "六月",
+        jul: "七月",
+        aug: "八月",
+        sep: "九月",
+        oct: "十月",
+        nov: "十一月",
+        dec: "十二月"
+      }
+    },
+    inputNumber: {
+      decrease: "减少数值",
+      increase: "增加数值"
+    },
+    select: {
+      loading: "加载中",
+      noMatch: "无匹配数据",
+      noData: "无数据",
+      placeholder: "请选择"
+    },
+    dropdown: {
+      toggleDropdown: "切换下拉选项"
+    },
+    mention: {
+      loading: "加载中"
+    },
+    cascader: {
+      noMatch: "无匹配数据",
+      loading: "加载中",
+      placeholder: "请选择",
+      noData: "暂无数据"
+    },
+    pagination: {
+      goto: "前往",
+      pagesize: "条/页",
+      total: "共 {total} 条",
+      pageClassifier: "页",
+      page: "页",
+      prev: "上一页",
+      next: "下一页",
+      currentPage: "第 {pager} 页",
+      prevPages: "向前 {pager} 页",
+      nextPages: "向后 {pager} 页",
+      deprecationWarning: "你使用了一些已被废弃的用法，请参考 el-pagination 的官方文档"
+    },
+    dialog: {
+      close: "关闭此对话框"
+    },
+    drawer: {
+      close: "关闭此对话框"
+    },
+    messagebox: {
+      title: "提示",
+      confirm: "确定",
+      cancel: "取消",
+      error: "输入的数据不合法!",
+      close: "关闭此对话框"
+    },
+    upload: {
+      deleteTip: "按 delete 键可删除",
+      delete: "删除",
+      preview: "查看图片",
+      continue: "继续上传"
+    },
+    slider: {
+      defaultLabel: "滑块介于 {min} 至 {max}",
+      defaultRangeStartLabel: "选择起始值",
+      defaultRangeEndLabel: "选择结束值"
+    },
+    table: {
+      emptyText: "暂无数据",
+      confirmFilter: "筛选",
+      resetFilter: "重置",
+      clearFilter: "全部",
+      sumText: "合计"
+    },
+    tour: {
+      next: "下一步",
+      previous: "上一步",
+      finish: "结束导览"
+    },
+    tree: {
+      emptyText: "暂无数据"
+    },
+    transfer: {
+      noMatch: "无匹配数据",
+      noData: "无数据",
+      titles: ["列表 1", "列表 2"],
+      filterPlaceholder: "请输入搜索内容",
+      noCheckedFormat: "共 {total} 项",
+      hasCheckedFormat: "已选 {checked}/{total} 项"
+    },
+    image: {
+      error: "加载失败"
+    },
+    pageHeader: {
+      title: "返回"
+    },
+    popconfirm: {
+      confirmButtonText: "确定",
+      cancelButtonText: "取消"
+    },
+    carousel: {
+      leftArrow: "上一张幻灯片",
+      rightArrow: "下一张幻灯片",
+      indicator: "幻灯片切换至索引 {index}"
+    }
+  }
+};
+/*! Element Plus v2.8.7 */
+var en = {
+  name: "en",
+  el: {
+    breadcrumb: {
+      label: "Breadcrumb"
+    },
+    colorpicker: {
+      confirm: "OK",
+      clear: "Clear",
+      defaultLabel: "color picker",
+      description: "current color is {color}. press enter to select a new color.",
+      alphaLabel: "pick alpha value"
+    },
+    datepicker: {
+      now: "Now",
+      today: "Today",
+      cancel: "Cancel",
+      clear: "Clear",
+      confirm: "OK",
+      dateTablePrompt: "Use the arrow keys and enter to select the day of the month",
+      monthTablePrompt: "Use the arrow keys and enter to select the month",
+      yearTablePrompt: "Use the arrow keys and enter to select the year",
+      selectedDate: "Selected date",
+      selectDate: "Select date",
+      selectTime: "Select time",
+      startDate: "Start Date",
+      startTime: "Start Time",
+      endDate: "End Date",
+      endTime: "End Time",
+      prevYear: "Previous Year",
+      nextYear: "Next Year",
+      prevMonth: "Previous Month",
+      nextMonth: "Next Month",
+      year: "",
+      month1: "January",
+      month2: "February",
+      month3: "March",
+      month4: "April",
+      month5: "May",
+      month6: "June",
+      month7: "July",
+      month8: "August",
+      month9: "September",
+      month10: "October",
+      month11: "November",
+      month12: "December",
+      week: "week",
+      weeks: {
+        sun: "Sun",
+        mon: "Mon",
+        tue: "Tue",
+        wed: "Wed",
+        thu: "Thu",
+        fri: "Fri",
+        sat: "Sat"
+      },
+      weeksFull: {
+        sun: "Sunday",
+        mon: "Monday",
+        tue: "Tuesday",
+        wed: "Wednesday",
+        thu: "Thursday",
+        fri: "Friday",
+        sat: "Saturday"
+      },
+      months: {
+        jan: "Jan",
+        feb: "Feb",
+        mar: "Mar",
+        apr: "Apr",
+        may: "May",
+        jun: "Jun",
+        jul: "Jul",
+        aug: "Aug",
+        sep: "Sep",
+        oct: "Oct",
+        nov: "Nov",
+        dec: "Dec"
+      }
+    },
+    inputNumber: {
+      decrease: "decrease number",
+      increase: "increase number"
+    },
+    select: {
+      loading: "Loading",
+      noMatch: "No matching data",
+      noData: "No data",
+      placeholder: "Select"
+    },
+    mention: {
+      loading: "Loading"
+    },
+    dropdown: {
+      toggleDropdown: "Toggle Dropdown"
+    },
+    cascader: {
+      noMatch: "No matching data",
+      loading: "Loading",
+      placeholder: "Select",
+      noData: "No data"
+    },
+    pagination: {
+      goto: "Go to",
+      pagesize: "/page",
+      total: "Total {total}",
+      pageClassifier: "",
+      page: "Page",
+      prev: "Go to previous page",
+      next: "Go to next page",
+      currentPage: "page {pager}",
+      prevPages: "Previous {pager} pages",
+      nextPages: "Next {pager} pages",
+      deprecationWarning: "Deprecated usages detected, please refer to the el-pagination documentation for more details"
+    },
+    dialog: {
+      close: "Close this dialog"
+    },
+    drawer: {
+      close: "Close this dialog"
+    },
+    messagebox: {
+      title: "Message",
+      confirm: "OK",
+      cancel: "Cancel",
+      error: "Illegal input",
+      close: "Close this dialog"
+    },
+    upload: {
+      deleteTip: "press delete to remove",
+      delete: "Delete",
+      preview: "Preview",
+      continue: "Continue"
+    },
+    slider: {
+      defaultLabel: "slider between {min} and {max}",
+      defaultRangeStartLabel: "pick start value",
+      defaultRangeEndLabel: "pick end value"
+    },
+    table: {
+      emptyText: "No Data",
+      confirmFilter: "Confirm",
+      resetFilter: "Reset",
+      clearFilter: "All",
+      sumText: "Sum"
+    },
+    tour: {
+      next: "Next",
+      previous: "Previous",
+      finish: "Finish"
+    },
+    tree: {
+      emptyText: "No Data"
+    },
+    transfer: {
+      noMatch: "No matching data",
+      noData: "No data",
+      titles: ["List 1", "List 2"],
+      filterPlaceholder: "Enter keyword",
+      noCheckedFormat: "{total} items",
+      hasCheckedFormat: "{checked}/{total} checked"
+    },
+    image: {
+      error: "FAILED"
+    },
+    pageHeader: {
+      title: "Back"
+    },
+    popconfirm: {
+      confirmButtonText: "Yes",
+      cancelButtonText: "No"
+    },
+    carousel: {
+      leftArrow: "Carousel arrow left",
+      rightArrow: "Carousel arrow right",
+      indicator: "Carousel switch to index {index}"
+    }
+  }
+};
 const flattenTreeList = (treeArray = [], childs = "children") => {
   return treeArray.reduce((acc, cur) => {
     return acc.concat(cur, flattenTreeList(cur[childs] || []));
@@ -6208,6 +6662,11 @@ const _hoisted_10 = { class: "custom-tree-node" };
 const _sfc_main = {
   __name: "tree-transfer-vue3",
   props: /* @__PURE__ */ mergeModels({
+    language: {
+      type: String,
+      default: "zh-cn"
+      // zh-cn en
+    },
     /* 标题 */
     titleList: {
       type: Array,
@@ -6464,6 +6923,9 @@ const _sfc_main = {
     const filterTo = ref("");
     const fromDisabled = computed(() => fromCheckNode.value.length === 0);
     const toDisabled = computed(() => toCheckNode.value.length === 0);
+    const locale = computed(() => {
+      return props.language === "zh-cn" ? zhCn : en;
+    });
     watch(
       fromCheckNode,
       (val) => {
@@ -6781,174 +7243,179 @@ const _sfc_main = {
       clearCheck
     });
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, [
-        createElementVNode("div", _hoisted_2, [
-          createElementVNode("div", _hoisted_3, [
-            createVNode(unref(ElCheckbox), {
-              modelValue: fromCheckAll.value,
-              "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => fromCheckAll.value = $event),
-              indeterminate: fromIndeterminate.value,
-              onChange: fromCheckAllChange
-            }, null, 8, ["modelValue", "indeterminate"]),
-            renderSlot(_ctx.$slots, "from-title", {}, () => [
-              createElementVNode("span", null, toDisplayString(__props.titleList[0]), 1)
-            ], true)
-          ]),
-          createElementVNode("div", _hoisted_4, [
-            __props.showFilter ? (openBlock(), createBlock(unref(ElInput), {
-              key: 0,
-              modelValue: filterFrom.value,
-              "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => filterFrom.value = $event),
-              clearable: "",
-              placeholder: __props.placeholderList[0] || __props.placeholder,
-              class: "filter-tree"
-            }, null, 8, ["modelValue", "placeholder"])) : createCommentVNode("", true),
-            createVNode(unref(ElTree), {
-              ref_key: "fromTreeRef",
-              ref: fromTreeRef,
-              "show-checkbox": "",
-              data: fromData.value,
-              "node-key": __props.defaultProps.id,
-              props: __props.defaultProps,
-              "render-after-expand": __props.renderAfterExpand,
-              load: __props.load,
-              "render-content": __props.fromRenderContent,
-              "highlight-current": __props.highlightCurrent,
-              "default-expand-all": __props.defaultExpandAll,
-              "expand-on-click-node": __props.expandOnClickNode,
-              "check-on-click-node": __props.checkOnClickNode,
-              "auto-expand-parent": __props.autoExpandParent,
-              "check-strictly": __props.checkStrictly,
-              "filter-node-method": fromFilterNodeMethod,
-              accordion: __props.accordion,
-              indent: __props.indent,
-              icon: __props.icon,
-              lazy: __props.lazy,
-              draggable: __props.draggable,
-              "allow-drag": __props.fromAllowDrag,
-              onNodeDragStart: fromNodeDragStart,
-              onNodeDragEnter: fromNodeDragEnter,
-              onNodeDragLeave: fromNodeDragLeave,
-              onNodeDragOver: fromNodeDragOver,
-              onNodeDragEnd: fromNodeDragEnd,
-              onNodeDrop: fromNodeDrop,
-              onCheck: fromCheck
-            }, {
-              default: withCtx(({ node, data }) => [
-                createElementVNode("span", _hoisted_5, [
-                  renderSlot(_ctx.$slots, "from-tree-content", {
-                    node,
-                    data
-                  }, () => [
-                    createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
-                  ], true)
-                ])
+      return openBlock(), createBlock(unref(ElConfigProvider), { locale: locale.value }, {
+        default: withCtx(() => [
+          createElementVNode("div", _hoisted_1, [
+            createElementVNode("div", _hoisted_2, [
+              createElementVNode("div", _hoisted_3, [
+                createVNode(unref(ElCheckbox), {
+                  modelValue: fromCheckAll.value,
+                  "onUpdate:modelValue": _cache[0] || (_cache[0] = ($event) => fromCheckAll.value = $event),
+                  indeterminate: fromIndeterminate.value,
+                  onChange: fromCheckAllChange
+                }, null, 8, ["modelValue", "indeterminate"]),
+                renderSlot(_ctx.$slots, "from-title", {}, () => [
+                  createElementVNode("span", null, toDisplayString(__props.titleList[0]), 1)
+                ], true)
               ]),
-              _: 3
-            }, 8, ["data", "node-key", "props", "render-after-expand", "load", "render-content", "highlight-current", "default-expand-all", "expand-on-click-node", "check-on-click-node", "auto-expand-parent", "check-strictly", "accordion", "indent", "icon", "lazy", "draggable", "allow-drag"]),
-            renderSlot(_ctx.$slots, "from-footer", {}, void 0, true)
+              createElementVNode("div", _hoisted_4, [
+                __props.showFilter ? (openBlock(), createBlock(unref(ElInput), {
+                  key: 0,
+                  modelValue: filterFrom.value,
+                  "onUpdate:modelValue": _cache[1] || (_cache[1] = ($event) => filterFrom.value = $event),
+                  clearable: "",
+                  placeholder: __props.placeholderList[0] || __props.placeholder,
+                  class: "filter-tree"
+                }, null, 8, ["modelValue", "placeholder"])) : createCommentVNode("", true),
+                createVNode(unref(ElTree), {
+                  ref_key: "fromTreeRef",
+                  ref: fromTreeRef,
+                  "show-checkbox": "",
+                  data: fromData.value,
+                  "node-key": __props.defaultProps.id,
+                  props: __props.defaultProps,
+                  "render-after-expand": __props.renderAfterExpand,
+                  load: __props.load,
+                  "render-content": __props.fromRenderContent,
+                  "highlight-current": __props.highlightCurrent,
+                  "default-expand-all": __props.defaultExpandAll,
+                  "expand-on-click-node": __props.expandOnClickNode,
+                  "check-on-click-node": __props.checkOnClickNode,
+                  "auto-expand-parent": __props.autoExpandParent,
+                  "check-strictly": __props.checkStrictly,
+                  "filter-node-method": fromFilterNodeMethod,
+                  accordion: __props.accordion,
+                  indent: __props.indent,
+                  icon: __props.icon,
+                  lazy: __props.lazy,
+                  draggable: __props.draggable,
+                  "allow-drag": __props.fromAllowDrag,
+                  onNodeDragStart: fromNodeDragStart,
+                  onNodeDragEnter: fromNodeDragEnter,
+                  onNodeDragLeave: fromNodeDragLeave,
+                  onNodeDragOver: fromNodeDragOver,
+                  onNodeDragEnd: fromNodeDragEnd,
+                  onNodeDrop: fromNodeDrop,
+                  onCheck: fromCheck
+                }, {
+                  default: withCtx(({ node, data }) => [
+                    createElementVNode("span", _hoisted_5, [
+                      renderSlot(_ctx.$slots, "from-tree-content", {
+                        node,
+                        data
+                      }, () => [
+                        createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
+                      ], true)
+                    ])
+                  ]),
+                  _: 3
+                }, 8, ["data", "node-key", "props", "render-after-expand", "load", "render-content", "highlight-current", "default-expand-all", "expand-on-click-node", "check-on-click-node", "auto-expand-parent", "check-strictly", "accordion", "indent", "icon", "lazy", "draggable", "allow-drag"]),
+                renderSlot(_ctx.$slots, "from-footer", {}, void 0, true)
+              ])
+            ]),
+            createElementVNode("div", _hoisted_6, [
+              createVNode(unref(ElButton), {
+                type: "primary",
+                icon: unref(arrow_right_default),
+                circle: !__props.showBtnTxt,
+                class: normalizeClass({ "hide-txt": !__props.showBtnTxt }),
+                disabled: fromDisabled.value,
+                onClick: _cache[2] || (_cache[2] = ($event) => addToAims(true))
+              }, {
+                default: withCtx(() => [
+                  createTextVNode(toDisplayString(__props.showBtnTxt ? __props.btnTitleList[0] : ""), 1)
+                ]),
+                _: 1
+              }, 8, ["icon", "circle", "class", "disabled"]),
+              createVNode(unref(ElButton), {
+                type: "primary",
+                icon: unref(arrow_left_default),
+                circle: !__props.showBtnTxt,
+                class: normalizeClass({ "hide-txt": !__props.showBtnTxt }),
+                disabled: toDisabled.value,
+                onClick: _cache[3] || (_cache[3] = ($event) => removeToSource(true))
+              }, {
+                default: withCtx(() => [
+                  createTextVNode(toDisplayString(__props.showBtnTxt ? __props.btnTitleList[1] : ""), 1)
+                ]),
+                _: 1
+              }, 8, ["icon", "circle", "class", "disabled"])
+            ]),
+            createElementVNode("div", _hoisted_7, [
+              createElementVNode("div", _hoisted_8, [
+                createVNode(unref(ElCheckbox), {
+                  modelValue: toCheckAll.value,
+                  "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => toCheckAll.value = $event),
+                  indeterminate: toIndeterminate.value,
+                  onChange: toCheckAllChange
+                }, null, 8, ["modelValue", "indeterminate"]),
+                renderSlot(_ctx.$slots, "to-title", {}, () => [
+                  createElementVNode("span", null, toDisplayString(__props.titleList[1]), 1)
+                ], true)
+              ]),
+              createElementVNode("div", _hoisted_9, [
+                __props.showFilter ? (openBlock(), createBlock(unref(ElInput), {
+                  key: 0,
+                  clearable: "",
+                  modelValue: filterTo.value,
+                  "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => filterTo.value = $event),
+                  placeholder: __props.placeholderList[1] || __props.placeholder,
+                  class: "filter-tree"
+                }, null, 8, ["modelValue", "placeholder"])) : createCommentVNode("", true),
+                createVNode(unref(ElTree), {
+                  ref_key: "toTreeRef",
+                  ref: toTreeRef,
+                  "show-checkbox": "",
+                  data: toData.value,
+                  "node-key": __props.defaultProps.id,
+                  props: __props.defaultProps,
+                  "render-after-expand": __props.renderAfterExpand,
+                  load: __props.load,
+                  "render-content": __props.toRenderContent,
+                  "highlight-current": __props.highlightCurrent,
+                  "default-expand-all": __props.defaultExpandAll,
+                  "expand-on-click-node": __props.expandOnClickNode,
+                  "check-on-click-node": __props.checkOnClickNode,
+                  "auto-expand-parent": __props.autoExpandParent,
+                  "check-strictly": __props.checkStrictly,
+                  "filter-node-method": toFilterNodeMethod,
+                  accordion: __props.accordion,
+                  indent: __props.indent,
+                  icon: __props.icon,
+                  lazy: __props.lazy,
+                  draggable: __props.draggable,
+                  "allow-drag": __props.toAllowDrag,
+                  onNodeDragStart: toNodeDragStart,
+                  onNodeDragEnter: toNodeDragEnter,
+                  onNodeDragLeave: toNodeDragLeave,
+                  onNodeDragOver: toNodeDragOver,
+                  onNodeDragEnd: toNodeDragEnd,
+                  onNodeDrop: toNodeDrop,
+                  onCheck: toCheck
+                }, {
+                  default: withCtx(({ node, data }) => [
+                    createElementVNode("span", _hoisted_10, [
+                      renderSlot(_ctx.$slots, "to-tree-content", {
+                        node,
+                        data
+                      }, () => [
+                        createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
+                      ], true)
+                    ])
+                  ]),
+                  _: 3
+                }, 8, ["data", "node-key", "props", "render-after-expand", "load", "render-content", "highlight-current", "default-expand-all", "expand-on-click-node", "check-on-click-node", "auto-expand-parent", "check-strictly", "accordion", "indent", "icon", "lazy", "draggable", "allow-drag"]),
+                renderSlot(_ctx.$slots, "to-footer", {}, void 0, true)
+              ])
+            ])
           ])
         ]),
-        createElementVNode("div", _hoisted_6, [
-          createVNode(unref(ElButton), {
-            type: "primary",
-            icon: unref(arrow_right_default),
-            circle: !__props.showBtnTxt,
-            class: normalizeClass({ "hide-txt": !__props.showBtnTxt }),
-            disabled: fromDisabled.value,
-            onClick: _cache[2] || (_cache[2] = ($event) => addToAims(true))
-          }, {
-            default: withCtx(() => [
-              createTextVNode(toDisplayString(__props.showBtnTxt ? __props.btnTitleList[0] : ""), 1)
-            ]),
-            _: 1
-          }, 8, ["icon", "circle", "class", "disabled"]),
-          createVNode(unref(ElButton), {
-            type: "primary",
-            icon: unref(arrow_left_default),
-            circle: !__props.showBtnTxt,
-            class: normalizeClass({ "hide-txt": !__props.showBtnTxt }),
-            disabled: toDisabled.value,
-            onClick: _cache[3] || (_cache[3] = ($event) => removeToSource(true))
-          }, {
-            default: withCtx(() => [
-              createTextVNode(toDisplayString(__props.showBtnTxt ? __props.btnTitleList[1] : ""), 1)
-            ]),
-            _: 1
-          }, 8, ["icon", "circle", "class", "disabled"])
-        ]),
-        createElementVNode("div", _hoisted_7, [
-          createElementVNode("div", _hoisted_8, [
-            createVNode(unref(ElCheckbox), {
-              modelValue: toCheckAll.value,
-              "onUpdate:modelValue": _cache[4] || (_cache[4] = ($event) => toCheckAll.value = $event),
-              indeterminate: toIndeterminate.value,
-              onChange: toCheckAllChange
-            }, null, 8, ["modelValue", "indeterminate"]),
-            renderSlot(_ctx.$slots, "to-title", {}, () => [
-              createElementVNode("span", null, toDisplayString(__props.titleList[1]), 1)
-            ], true)
-          ]),
-          createElementVNode("div", _hoisted_9, [
-            __props.showFilter ? (openBlock(), createBlock(unref(ElInput), {
-              key: 0,
-              clearable: "",
-              modelValue: filterTo.value,
-              "onUpdate:modelValue": _cache[5] || (_cache[5] = ($event) => filterTo.value = $event),
-              placeholder: __props.placeholderList[1] || __props.placeholder,
-              class: "filter-tree"
-            }, null, 8, ["modelValue", "placeholder"])) : createCommentVNode("", true),
-            createVNode(unref(ElTree), {
-              ref_key: "toTreeRef",
-              ref: toTreeRef,
-              "show-checkbox": "",
-              data: toData.value,
-              "node-key": __props.defaultProps.id,
-              props: __props.defaultProps,
-              "render-after-expand": __props.renderAfterExpand,
-              load: __props.load,
-              "render-content": __props.toRenderContent,
-              "highlight-current": __props.highlightCurrent,
-              "default-expand-all": __props.defaultExpandAll,
-              "expand-on-click-node": __props.expandOnClickNode,
-              "check-on-click-node": __props.checkOnClickNode,
-              "auto-expand-parent": __props.autoExpandParent,
-              "check-strictly": __props.checkStrictly,
-              "filter-node-method": toFilterNodeMethod,
-              accordion: __props.accordion,
-              indent: __props.indent,
-              icon: __props.icon,
-              lazy: __props.lazy,
-              draggable: __props.draggable,
-              "allow-drag": __props.toAllowDrag,
-              onNodeDragStart: toNodeDragStart,
-              onNodeDragEnter: toNodeDragEnter,
-              onNodeDragLeave: toNodeDragLeave,
-              onNodeDragOver: toNodeDragOver,
-              onNodeDragEnd: toNodeDragEnd,
-              onNodeDrop: toNodeDrop,
-              onCheck: toCheck
-            }, {
-              default: withCtx(({ node, data }) => [
-                createElementVNode("span", _hoisted_10, [
-                  renderSlot(_ctx.$slots, "to-tree-content", {
-                    node,
-                    data
-                  }, () => [
-                    createElementVNode("span", null, toDisplayString(data[__props.defaultProps.label]), 1)
-                  ], true)
-                ])
-              ]),
-              _: 3
-            }, 8, ["data", "node-key", "props", "render-after-expand", "load", "render-content", "highlight-current", "default-expand-all", "expand-on-click-node", "check-on-click-node", "auto-expand-parent", "check-strictly", "accordion", "indent", "icon", "lazy", "draggable", "allow-drag"]),
-            renderSlot(_ctx.$slots, "to-footer", {}, void 0, true)
-          ])
-        ])
-      ]);
+        _: 3
+      }, 8, ["locale"]);
     };
   }
 };
-const TreeTransferVue3 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-54b932da"]]);
+const TreeTransferVue3 = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-2ce0a2f8"]]);
 export {
   TreeTransferVue3 as default
 };
